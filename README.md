@@ -8,7 +8,7 @@ L'obiettivo del progetto è implementare, testare e confrontare le prestazioni d
 Nel progetto sono stati sviluppati i seguenti approcci risolutivi interamente in Python:
 
 *   **Modello PLI:** Un modello esatto formulato a due indici e risolto tramite l'API della libreria **PuLP**, utilizzando il solver *CBC*. Per evitare l'esplosione combinatoria tipica del CVRP, i vincoli di eliminazione dei sottocicli (GSEC) non vengono generati a priori, ma inseriti dinamicamente attraverso un approccio **Cutting Plane**. Tramite la libreria **NetworkX**, il codice ispeziona il grafo della soluzione passo dopo passo, aggiungendo i vincoli mancanti solo quando si formano dei sottocicli.
-*   **Euristica di Clarke-Wright:** Una delle più note euristiche per il VRP. L'algoritmo parte da una soluzione di base, ovvero un veicolo per ogni cliente e unisce progressivamente le rotte valutando il massimo saving in termini di distanza, rispettando il vincolo di capacità dei veicoli.
+*   **Euristica di Clarke-Wright:** Una delle più note euristiche per il VRP. L'algoritmo parte da una soluzione di base, ovvero un veicolo per ogni cliente, e unisce progressivamente le rotte valutando il massimo saving in termini di distanza, rispettando il vincolo di capacità dei veicoli.
 
 ## Dataset e Generazione delle Istanze
 
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 L'intero studio è riproducibile. Dopo aver installato i prerequisiti, eseguire i file dal terminale nel seguente ordine cronologico:
 
 ```bash
-1. python stress_test.py
-2. python benchmark.py
-3. python grafici.py
+python stress_test.py
+python benchmark.py
+python grafici.py
 ```
