@@ -1,7 +1,7 @@
 # vrp-PLI-vs-Clarke-Wright
 Progetto di Algoritmi e Modelli di Ottimizzazione Discreta (AMOD). Progetto accademico realizzato per il corso di Laurea Magistrale in Cybersecurity presso l'Università di Roma Tor Vergata.
 
-L'obiettivo del progetto è implementare, testare e confrontare le prestazioni di un PLI rispetto all'Euristica di Carke-Wright, valutando il trade-off tra la qualità della soluzione trovata ed il tempo di calcolo necessario per ottenerla.
+L'obiettivo del progetto è implementare, testare e confrontare le prestazioni di un modello PLI rispetto all'Euristica di Clarke-Wright, valutando il trade-off tra la qualità della soluzione trovata ed il tempo di calcolo necessario per ottenerla.
 
 ## Algoritmi Implementati
 
@@ -31,7 +31,7 @@ Il progetto è stato suddiviso in moduli logici. Di seguito la descrizione di tu
 **Script di Esecuzione:**
 *   **`stress_test.py`**: Script che testa istanze con N incrementale per valutare le prestazioni del modello.
 *   **`benchmark.py`**: Lo script principale. Genera e risolve in batch 120 istanze uniche  utilizzando sia il modello PLI che l'euristica. Raccoglie tempi, costi, Lower Bound e GAP, salvando tutto in un file CSV.
-*   **`grafici.py`**: Legge i risultati dal CSV e genera in automatico gli 8 grafici ì usati per l'analisi dei risultati.
+*   **`grafici.py`**: Legge i risultati dal CSV e genera in automatico gli 8 grafici usati per l'analisi dei risultati.
 
 **Configurazione e Output:**
 *   **`requirements.txt`**: Elenco delle dipendenze Python per riprodurre l'ambiente di lavoro.
@@ -42,10 +42,13 @@ Il progetto è stato suddiviso in moduli logici. Di seguito la descrizione di tu
 Assicurarsi di avere Python 3.8+ installato sul sistema. Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono installare rapidamente eseguendo da terminale:
 ```bash
 pip install -r requirements.txt
+```
 
 ### Esecuzione
 L'intero studio è riproducibile. Dopo aver installato i prerequisiti, eseguire i file dal terminale nel seguente ordine cronologico:
 
+```bash
 1. python stress_test.py
 2. python benchmark.py
 3. python grafici.py
+```
