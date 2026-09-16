@@ -30,7 +30,7 @@ Il progetto è stato suddiviso in moduli logici. Di seguito la descrizione di tu
 
 **Script di Esecuzione:**
 *   **`stress_test.py`**: Script che testa istanze con N incrementale per valutare le prestazioni del modello.
-*   **`benchmark.py`**: Lo script principale. Genera e risolve in batch 120 istanze uniche  utilizzando sia il modello PLI che l'euristica. Raccoglie tempi, costi, Lower Bound e GAP, salvando tutto in un file CSV.
+*   **`benchmark.py`**: Lo script principale. Genera e risolve in batch 120 istanze uniche utilizzando sia il modello PLI che l'euristica. Raccoglie tempi, costi, Lower Bound e GAP, salvando tutto in un file CSV.
 *   **`grafici.py`**: Legge i risultati dal CSV e genera in automatico gli 8 grafici usati per l'analisi dei risultati.
 
 **Configurazione e Output:**
