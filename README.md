@@ -37,6 +37,8 @@ Il progetto è stato suddiviso in moduli logici. Di seguito la descrizione di tu
 *   **`requirements.txt`**: Elenco delle dipendenze Python per riprodurre l'ambiente di lavoro.
 *   **`esperimenti_amod_vrp.csv`** e **`Fig*.png`**: File generati automaticamente a runtime durante l'esecuzione degli script.
 
+**Documentazione:**
+*   **`Progetto_AMOD_Pinfildi.pdf`**: Presentazione del progetto (Slide).
 
 ### Prerequisiti
 Assicurarsi di avere Python 3.8+ installato sul sistema. Le librerie necessarie sono elencate nel file `requirements.txt`. Si possono installare rapidamente eseguendo da terminale:
@@ -48,6 +50,7 @@ pip install -r requirements.txt
 L'intero studio è riproducibile. Dopo aver installato i prerequisiti, eseguire i file dal terminale nel seguente ordine cronologico:
 
 ```bash
+cd src
 python stress_test.py
 python benchmark.py
 python grafici.py
