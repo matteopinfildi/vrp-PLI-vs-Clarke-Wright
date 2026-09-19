@@ -79,7 +79,7 @@ for scenario in scenari:
     plt.savefig(f"Fig1_Scalabilita_PLI_K{K}.png", dpi=300, bbox_inches='tight')
     plt.close()
 
-    # FIGURA 2: tempi di esecuzione (AGGIORNATA CON ETICHETTE E LINEA TIME-OUT)
+    # FIGURA 2: tempi di esecuzione
     fig2, axes2 = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
     fig2.suptitle(f"Tempi di Esecuzione (Scala Log) : {titolo}", fontsize=16, fontweight='bold', y=1.05)
     
@@ -91,31 +91,24 @@ for scenario in scenari:
         axes2[idx].plot(time_data.index, time_data['Tempo_Esatto_s'], marker='o', color='#d62728', linewidth=2, label="Modello Esatto (PLI)")
         axes2[idx].plot(time_data.index, time_data['Tempo_CW_s'], marker='s', linestyle='--', color='#1f77b4', linewidth=2, label="Clarke-Wright")
         
-        # 1. Imposta la scala logaritmica e formatta i numeri
         axes2[idx].set_yscale("log")
         axes2[idx].yaxis.set_major_formatter(ticker.FuncFormatter(format_log_ticks))
         
-        # Allarga un po' il limite superiore del grafico per far spazio alle scritte
         axes2[idx].set_ylim(bottom=None, top=900) 
         
-        # 2. Aggiunge la linea visiva del Time-Out a 300 secondi
         axes2[idx].axhline(y=300, color='gray', linestyle=':', linewidth=1.5, zorder=0)
-        
-        # Scrive "Limite Time-Out" solo sul primo grafico per non appesantire
+    
         if idx == 0:
             axes2[idx].text(0, 330, "Limite Time-Out (300s)", color='dimgray', fontsize=9, style='italic', va='bottom', ha='left')
 
-        # 3. Aggiunge le etichette con i tempi esatti sopra/sotto i punti
         for i, (x_val, row) in enumerate(time_data.iterrows()):
             t_esatto = row['Tempo_Esatto_s']
             t_cw = row['Tempo_CW_s']
             
-            # Formattazione per il PLI (se tocca i 300s, metti "> 300s")
             testo_esatto = "> 300s" if t_esatto > 290 else f"{t_esatto:.1f}s"
             axes2[idx].annotate(testo_esatto, (i, t_esatto), textcoords="offset points", xytext=(0, 8), 
                                ha='center', fontsize=9, color='#d62728', weight='bold')
             
-            # Formattazione per Clarke-Wright (mostra i millesimi per far vedere quanto è veloce)
             testo_cw = f"{t_cw:.3f}s" if t_cw < 0.1 else f"{t_cw:.2f}s"
             axes2[idx].annotate(testo_cw, (i, t_cw), textcoords="offset points", xytext=(0, -15), 
                                ha='center', fontsize=9, color='#1f77b4', weight='bold')
