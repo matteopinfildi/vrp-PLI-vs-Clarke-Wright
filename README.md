@@ -1,5 +1,5 @@
 # vrp-PLI-vs-Clarke-Wright
-Progetto di Algoritmi e Modelli di Ottimizzazione Discreta (AMOD). Progetto accademico realizzato per il corso di Laurea Magistrale in Ingegneria Informatica, indirizzo Cybersecurity presso l'Università di Roma Tor Vergata.
+Progetto di Algoritmi e Modelli di Ottimizzazione Discreta (AMOD). Progetto accademico realizzato per il corso di Laurea Magistrale in Ingegneria Informatica, indirizzo Cybersecurity, presso l'Università di Roma Tor Vergata.
 
 L'obiettivo del progetto è implementare, testare e confrontare le prestazioni di un modello PLI rispetto all'Euristica di Clarke-Wright, valutando il trade-off tra la qualità della soluzione trovata ed il tempo di calcolo necessario per ottenerla.
 
