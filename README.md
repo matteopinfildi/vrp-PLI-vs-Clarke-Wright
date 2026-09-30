@@ -1,7 +1,7 @@
 # vrp-PLI-vs-Clarke-Wright
 Progetto di Algoritmi e Modelli di Ottimizzazione Discreta (AMOD). Progetto accademico realizzato per il corso di Laurea Magistrale in Ingegneria Informatica, indirizzo Cybersecurity, presso l'Università di Roma Tor Vergata.
 
-L'obiettivo del progetto è implementare, testare e confrontare le prestazioni di un modello PLI rispetto all'Euristica di Clarke-Wright, valutando il trade-off tra la qualità della soluzione trovata ed il tempo di calcolo necessario per ottenerla.
+L'obiettivo del progetto è implementare, testare e confrontare le prestazioni di un modello PLI rispetto all'Euristica di Clarke-Wright per la risoluzione del CVRP, valutando il trade-off tra la qualità della soluzione trovata ed il tempo di calcolo necessario per ottenerla.
 
 ## Algoritmi Implementati
 
@@ -16,7 +16,7 @@ Le istanze sono state generate randomicamente raggruppandole per caratteristiche
 1.  **Distribuzione Uniforme:** I clienti sono dispersi casualmente sulla mappa.
 2.  **Distribuzione a Cluster:** I clienti sono raggruppati in specifiche zone.
 
-Gli esperimenti sono stati condotti mantenendo una flotta di veicoli pari a K = 3 e K = 5 e aumentando progressivamente il numero di clienti (N). 
+Gli esperimenti sono stati condotti fissando una flotta di veicoli pari a K = 3 e K = 5 e aumentando progressivamente il numero di clienti (N). 
 
 ## Guida all'Uso del Progetto
 
