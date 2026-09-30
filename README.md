@@ -47,7 +47,7 @@ pip install -r requirements.txt
 ```
 
 ### Esecuzione
-L'intero studio è riproducibile. Dopo aver installato i prerequisiti, eseguire i file dal terminale nel seguente ordine cronologico:
+L'intero studio è riproducibile. Dopo aver installato i prerequisiti, eseguire i file dal terminale nel seguente ordine sequenziale:
 
 ```bash
 cd src
