@@ -14,7 +14,7 @@ Nel progetto sono stati sviluppati i seguenti approcci risolutivi interamente in
 
 Le istanze sono state generate randomicamente raggruppandole per caratteristiche simili. Per simulare diversi scenari reali, sono state create due topologie:
 1.  **Distribuzione Uniforme:** I clienti sono dispersi casualmente sulla mappa.
-2.  **Distribuzione a Cluster:** I clienti sono raggruppati in specifiche zone.
+2.  **Distribuzione a Cluster:** I clienti sono raggruppati in specifiche zone ad alta densità.
 
 Gli esperimenti sono stati condotti fissando una flotta di veicoli pari a K = 3 e K = 5 e aumentando progressivamente il numero di clienti (N). 
 
